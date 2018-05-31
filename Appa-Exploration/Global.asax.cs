@@ -4,6 +4,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Services.Configuration;
 using SimpleInjector;
+using SimpleInjector.Integration.WebApi;
 using SimpleInjector.Lifestyles;
 
 namespace Appa_Exploration
@@ -25,8 +26,14 @@ namespace Appa_Exploration
             // Since the interfaces and models exisit in a service project, we will set them up there...
             DependencyConfig.Setup(container);
 
+            container.Verify();
+
+
+
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            GlobalConfiguration.Configuration.DependencyResolver = new SimpleInjectorWebApiDependencyResolver(container);
+
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

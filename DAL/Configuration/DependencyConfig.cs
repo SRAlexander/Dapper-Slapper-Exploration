@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using DAL.DAPPER;
 using SimpleInjector;
 
 namespace DAL.Configuration
@@ -15,6 +16,8 @@ namespace DAL.Configuration
         public static void Setup(Container container)
         {
             container.Register<DbContext, Context>(Lifestyle.Scoped);
+
+            container.Register<IDapperLogQueries, DapperLogQueries>(Lifestyle.Scoped);
         }
     }
 }

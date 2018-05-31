@@ -1,4 +1,5 @@
-﻿using SimpleInjector;
+﻿using Services.Services;
+using SimpleInjector;
 
 namespace Services.Configuration
 {
@@ -14,6 +15,7 @@ namespace Services.Configuration
         public static void Setup(Container container)
         {
             //container.Register<IDbContext, Context>(Lifestyle.Scoped);
+            container.Register<ILoggingService, LoggingService>(Lifestyle.Scoped);
 
             DAL.Configuration.DependencyConfig.Setup(container);
         }

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services
+namespace DAL.DAPPER
 {
-    public class Class1
+    public interface IDapperLogQueries
     {
+        void AddLogEntry(int userId, string message);
     }
 }
