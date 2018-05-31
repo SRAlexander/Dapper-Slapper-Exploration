@@ -6,4 +6,7 @@ Appa-Exploration/obj/
 packages/
 IServices/obj/
 IServices/bin/
-
+DAL/bin/
+DAL/obj/
+Services/bin/
+Services/obj/

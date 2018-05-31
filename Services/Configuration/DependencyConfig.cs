@@ -1,6 +1,6 @@
 ﻿using SimpleInjector;
 
-namespace IServices.Configuration
+namespace Services.Configuration
 {
     /// <summary>
     /// 
@@ -13,7 +13,9 @@ namespace IServices.Configuration
         /// <param name="container"></param>
         public static void Setup(Container container)
         {
-            //container.Register<Interface, Class>(LifeStyle.);
+            //container.Register<IDbContext, Context>(Lifestyle.Scoped);
+
+            DAL.Configuration.DependencyConfig.Setup(container);
         }
     }
 }

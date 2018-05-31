@@ -191,9 +191,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IServices\IServices.csproj">
-      <Project>{c4d78171-e41c-47f3-93eb-7d9b82211a3c}</Project>
-      <Name>IServices</Name>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{9dd9fa1c-1c60-4a9a-b74e-4afcace6794b}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
